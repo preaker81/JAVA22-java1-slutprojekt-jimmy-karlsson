@@ -20,7 +20,7 @@ import javax.swing.border.Border;
 
 class GUI {
 
-	static void createAndDisplay() {
+	protected static void createAndDisplay() {
 
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,7 +99,7 @@ class GUI {
 		container.add(clearButton);
 	}
 
-	public static void addPlaceholderText(JTextField textfield, String placeholder) {
+	private static void addPlaceholderText(JTextField textfield, String placeholder) {
 		textfield.setForeground(Color.GRAY);
 		textfield.addFocusListener(new FocusListener() {
 			@Override
