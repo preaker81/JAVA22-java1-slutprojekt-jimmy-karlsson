@@ -7,7 +7,7 @@ import java.util.Locale;
 
 class Date {
 
-	public static String getDate(int x) {
+	protected static String getDate(int x) {
 		LocalDate now = LocalDate.now();
 
 		TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
@@ -17,7 +17,7 @@ class Date {
 		return dateString;
 	}
 
-	public static String getWeekDay(int x) {
+	protected static String getWeekDay(int x) {
 		LocalDate now = LocalDate.now();
 		TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
 		LocalDate date = now.with(fieldISO, x);
